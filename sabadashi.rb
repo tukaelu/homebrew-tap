@@ -5,20 +5,20 @@
 class Sabadashi < Formula
   desc ""
   homepage ""
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.3/sabadashi_darwin_amd64.zip"
-      sha256 "c6113c8f2b71ac904930032599a21a6194a4c7c03971f40f8011f91b11b1742e"
+    if Hardware::CPU.arm?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.4/sabadashi_darwin_arm64.zip"
+      sha256 "8725d4433e09525663b576740ba3e8c45d7cdca15b06f30225f84d9f46edcd28"
 
       def install
         bin.install "sabadashi"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.3/sabadashi_darwin_arm64.zip"
-      sha256 "e6490aee0d12c855e24edd90c151e8d1bb06e667c76a867b3604744662699384"
+    if Hardware::CPU.intel?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.4/sabadashi_darwin_amd64.zip"
+      sha256 "2449e050225c3499b4b6020674ea85e9d24f54d0972dc86b309d670c47ed003f"
 
       def install
         bin.install "sabadashi"
@@ -28,16 +28,16 @@ class Sabadashi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.3/sabadashi_linux_arm64.zip"
-      sha256 "0effba4febfc14b54abf581b59e34e7939d4e13b24464e60d71810cf5cf68e08"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.4/sabadashi_linux_arm64.zip"
+      sha256 "5862ff37868d070e5d2e563e4f5063d1c001a8fb3b2a0d9b80bb5e09414fa8c1"
 
       def install
         bin.install "sabadashi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.3/sabadashi_linux_amd64.zip"
-      sha256 "6f1b8a276bfc7ee61bf50bb08693659189b28da4442899e4352f85557ea30dea"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.4/sabadashi_linux_amd64.zip"
+      sha256 "1b28523bd96e61fd88a19a0b2d76a1b65cf278af5f12c8e5c782271db4dbbb3f"
 
       def install
         bin.install "sabadashi"

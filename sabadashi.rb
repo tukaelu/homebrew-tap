@@ -5,20 +5,20 @@
 class Sabadashi < Formula
   desc ""
   homepage ""
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.7/sabadashi_darwin_arm64.zip"
-      sha256 "cbc80855ec7da8152c18fb3e47442ce3b26333ba3c31b6997359e59af20e218d"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.8/sabadashi_darwin_arm64.zip"
+      sha256 "25f0db14b2eb12ade47cbe70d3860416ce50c61c9fb8366bdc2e7eaddbbe2491"
 
       def install
         bin.install "sabadashi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.7/sabadashi_darwin_amd64.zip"
-      sha256 "b2a9cdfabbc59ebe347ad55f7f503ccfca8ee5a6c3da80c4f56b27552fe2779a"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.8/sabadashi_darwin_amd64.zip"
+      sha256 "8209a5da840a674bb4e48cb88924750a6e50c32ee4cfd2261829a153d73da9c5"
 
       def install
         bin.install "sabadashi"
@@ -28,16 +28,16 @@ class Sabadashi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.7/sabadashi_linux_arm64.zip"
-      sha256 "54fac608a321b77793f7ef143f535eeffb8f03f7fa36cc852db3dbbfbf39ef8f"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.8/sabadashi_linux_arm64.zip"
+      sha256 "34b22d193d358b94efa6f8124eccc1503a49394d44cdb1000d34c5b2f007b842"
 
       def install
         bin.install "sabadashi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.7/sabadashi_linux_amd64.zip"
-      sha256 "f3cb7b4fc1e04b6bb2f8fe7c1512ef4d528b9eb53e5ef4d20bb16cc27eee026e"
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.8/sabadashi_linux_amd64.zip"
+      sha256 "5d5ead2b0ab51f13e34e22878e77722610682d6ac8d3c1b2148b6ac527872cf0"
 
       def install
         bin.install "sabadashi"

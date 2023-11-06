@@ -5,20 +5,20 @@
 class Ikesu < Formula
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.4/ikesu_darwin_amd64.zip"
-      sha256 "14b3cbeae83a65cd79c21ee61127c6f30889cc55ac4e97a2978a9a8d6cabe4ef"
+      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.5/ikesu_darwin_amd64.zip"
+      sha256 "9578c9144d809cf9c531cbdea4f427c88d9e421cee887aa4f596ab998ec31beb"
 
       def install
         bin.install "ikesu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.4/ikesu_darwin_arm64.zip"
-      sha256 "27ae84158283eb599f32944d38d1c9296546b6cb3441846c606f8ca84bc70f5e"
+      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.5/ikesu_darwin_arm64.zip"
+      sha256 "db95195b764f82980cbfe611b5aa33237000767db3f01e7c7fc92bd0fe30c5af"
 
       def install
         bin.install "ikesu"
@@ -27,17 +27,17 @@ class Ikesu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.4/ikesu_linux_amd64.zip"
-      sha256 "a659d8abc07d6020bbc4b6ade61bd25f8a4d0a1b233882bb8922f384abb3645b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.5/ikesu_linux_arm64.zip"
+      sha256 "8eaae7ab6405ad9a9e6a5d4d324fa3996cf852fc7264062e6cb011dde17c1312"
 
       def install
         bin.install "ikesu"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.4/ikesu_linux_arm64.zip"
-      sha256 "9b73c727fd7397bcf403cb0dffa92d206ebff61b4380846ca32a97950082f0a2"
+    if Hardware::CPU.intel?
+      url "https://github.com/tukaelu/ikesu/releases/download/v0.0.5/ikesu_linux_amd64.zip"
+      sha256 "d283e27f2df5d19c1209e0f980f6a2b80668ba8a69e7f6a9f217683a841198ad"
 
       def install
         bin.install "ikesu"

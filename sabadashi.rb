@@ -5,20 +5,20 @@
 class Sabadashi < Formula
   desc ""
   homepage ""
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.9/sabadashi_darwin_arm64.zip"
-      sha256 "54d9698de948dfba557e3bbbed692fbe693e5973d149c1bdf5f40a2ecec0c976"
+    if Hardware::CPU.intel?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.10/sabadashi_darwin_amd64.zip"
+      sha256 "67698c9aa9d4b7ec572def10cb75d316d1b864457d9b64f4c39a902a5b87a624"
 
       def install
         bin.install "sabadashi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.9/sabadashi_darwin_amd64.zip"
-      sha256 "9eb626af3cd1198006b7415e3c8cc6273c78aa5116abe0d377d7f98d93ff7ac9"
+    if Hardware::CPU.arm?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.10/sabadashi_darwin_arm64.zip"
+      sha256 "ace704963ea922443e7f22a012b720a3571f327ad487151649f1d2560d937266"
 
       def install
         bin.install "sabadashi"
@@ -27,17 +27,17 @@ class Sabadashi < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.9/sabadashi_linux_arm64.zip"
-      sha256 "0ce350e469a48e06a55cdd815248e8a7aacfb792443e5a593542ca629be3b09b"
+    if Hardware::CPU.intel?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.10/sabadashi_linux_amd64.zip"
+      sha256 "6a5cb8eefbbd9aa37474e5f35cf9aaf63333074c1d18de2194b224047d9333a4"
 
       def install
         bin.install "sabadashi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.9/sabadashi_linux_amd64.zip"
-      sha256 "a91ba6148dd1ff7f12f85dec6ced3e33ba1629303e4503f5c51da51d821d9b84"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tukaelu/sabadashi/releases/download/v0.1.10/sabadashi_linux_arm64.zip"
+      sha256 "17e8121f0931db3a3ebaa5ddd7e27d5f109aa57ae0a515aa6f0090e19e47695a"
 
       def install
         bin.install "sabadashi"

@@ -5,20 +5,20 @@
 class Zgsync < Formula
   desc ""
   homepage ""
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     on_intel do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.5/zgsync_darwin_amd64.zip"
-      sha256 "9acb4e7f2d4ca9eb20f045fab90c5e4c902019e1c9131d5fbdf59b938f3451e9"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.6/zgsync_darwin_amd64.zip"
+      sha256 "e4a1fd52c132d4321ace05e987582237f182d7521a1378af12cecf094ea79a6d"
 
       def install
         bin.install "zgsync"
       end
     end
     on_arm do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.5/zgsync_darwin_arm64.zip"
-      sha256 "fe905a8b42db207a04f762fb40db9be7f6333d1bc90b12ad56dc8d664baaaefd"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.6/zgsync_darwin_arm64.zip"
+      sha256 "4cb1ba51fc297d2b30e2933abd0e1814103de87faefde8326675c77a80b5c057"
 
       def install
         bin.install "zgsync"
@@ -29,8 +29,8 @@ class Zgsync < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.5/zgsync_linux_amd64.zip"
-        sha256 "9a9382a2d18b596602b629761a7b3c0ca7564fb5f025d9979e0d56565e07334b"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.6/zgsync_linux_amd64.zip"
+        sha256 "1b1413bb905d14c10b1d9d699694603261bd2547d6f0fc7b5b6167d7f81932bb"
 
         def install
           bin.install "zgsync"
@@ -39,8 +39,8 @@ class Zgsync < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.5/zgsync_linux_arm64.zip"
-        sha256 "ce0ac2da416e39e5b406bbe354089372767ecbbb8b0b49c9bfc15779cedea8bb"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.6/zgsync_linux_arm64.zip"
+        sha256 "65ac3852eeba5664152e9861b541bb785844650b17ff74378a6c457b4cb52914"
 
         def install
           bin.install "zgsync"

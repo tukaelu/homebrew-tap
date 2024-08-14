@@ -5,20 +5,20 @@
 class Zgsync < Formula
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
     on_intel do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.8/zgsync_darwin_amd64.zip"
-      sha256 "b8a6b5a4796a51cd6ee13c33fbe2d18ae2d556a3b0c8a9dacaf4234f73c8da48"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.9/zgsync_0.0.9_darwin_amd64.zip"
+      sha256 "5c60c09c250ad36e7a721dfb488a50a8150b539bfa8cf19ed9f3aa667d8351b0"
 
       def install
         bin.install "zgsync"
       end
     end
     on_arm do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.8/zgsync_darwin_arm64.zip"
-      sha256 "45b8f34212e67350242e280421cf133207e5b74ba05bcb5f005d00a92d9d7ade"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.9/zgsync_0.0.9_darwin_arm64.zip"
+      sha256 "72f4e258c6c338811691829c0adb05e03a48131317a23ee8ca0b7f62ea3e8f57"
 
       def install
         bin.install "zgsync"
@@ -29,8 +29,8 @@ class Zgsync < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.8/zgsync_linux_amd64.zip"
-        sha256 "e16db866fa6de25f423e2d506c3fa3ab8a31fdb10cc1b4b79788f863ae985fd2"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.9/zgsync_0.0.9_linux_amd64.tar.gz"
+        sha256 "b09b3b94b468966f56c233c9bb7c1241c8fed40324492429f593d78a05b180bb"
 
         def install
           bin.install "zgsync"
@@ -39,8 +39,8 @@ class Zgsync < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.8/zgsync_linux_arm64.zip"
-        sha256 "e003cf17333f791bab62e38784ec0990e536067916ddcae117aced0caf4d98c9"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.9/zgsync_0.0.9_linux_arm64.tar.gz"
+        sha256 "55860fb410a2cd081ff4f381e10f41796f493f2fd0c93ae16f362746dfd00631"
 
         def install
           bin.install "zgsync"

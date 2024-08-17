@@ -5,20 +5,20 @@
 class Zgsync < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     on_intel do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.10/zgsync_0.0.10_darwin_amd64.zip"
-      sha256 "93be1f7a92b774d2ce3142f3aaa417b398b18dad4c5e5af5542d62bc5952bdb9"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_darwin_amd64.zip"
+      sha256 "e1b4d368b22e490dd143b9dee98e68ad59415fa8424e18ed8375e03492cf21f4"
 
       def install
         bin.install "zgsync"
       end
     end
     on_arm do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.10/zgsync_0.0.10_darwin_arm64.zip"
-      sha256 "3f1e8226c7c5b338c4ffea0af6d9bb1d954a24a8d93c05e5c954e82d4e992351"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_darwin_arm64.zip"
+      sha256 "974322654a9c96a036bacd82ac38edb49219118f96598f701a7028312387cab8"
 
       def install
         bin.install "zgsync"
@@ -29,8 +29,8 @@ class Zgsync < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.10/zgsync_0.0.10_linux_amd64.tar.gz"
-        sha256 "77c2a2bdb5d0d38e8a640b453620830b15db1d55a36be966cbd0b954f44d0a88"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_linux_amd64.tar.gz"
+        sha256 "751bdb3485e9b0e41752de8a2e693a32578b209ba771fdd9b136597379f8c668"
 
         def install
           bin.install "zgsync"
@@ -39,8 +39,8 @@ class Zgsync < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.10/zgsync_0.0.10_linux_arm64.tar.gz"
-        sha256 "db6b342ae3d190dc67e705f757c4994b91ca70b4a24452b6cc195de457989bbe"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_linux_arm64.tar.gz"
+        sha256 "53fb145f2af1fdb04b2169097a6ca6de7fb926bd9d60156bf04686dd8b69625f"
 
         def install
           bin.install "zgsync"

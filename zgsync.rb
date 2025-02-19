@@ -5,20 +5,20 @@
 class Zgsync < Formula
   desc ""
   homepage ""
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
-    on_intel do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_darwin_amd64.zip"
-      sha256 "e1b4d368b22e490dd143b9dee98e68ad59415fa8424e18ed8375e03492cf21f4"
+    if Hardware::CPU.intel?
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.12/zgsync_0.0.12_darwin_amd64.zip"
+      sha256 "850a44ab5e1bbc4f70129208cdd5db760d726dbcc11de87725eaef49d0b9a26e"
 
       def install
         bin.install "zgsync"
       end
     end
-    on_arm do
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_darwin_arm64.zip"
-      sha256 "974322654a9c96a036bacd82ac38edb49219118f96598f701a7028312387cab8"
+    if Hardware::CPU.arm?
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.12/zgsync_0.0.12_darwin_arm64.zip"
+      sha256 "f5a05cdd30d830c71157f328d60cae25b59f2de5d9af621e52075662c1ed656c"
 
       def install
         bin.install "zgsync"
@@ -27,20 +27,20 @@ class Zgsync < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_linux_amd64.tar.gz"
-        sha256 "751bdb3485e9b0e41752de8a2e693a32578b209ba771fdd9b136597379f8c668"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.12/zgsync_0.0.12_linux_amd64.tar.gz"
+        sha256 "1f125792f2f3afa324d2a678536c1347718874db6cacfdfadb459dcfc318441a"
 
         def install
           bin.install "zgsync"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.11/zgsync_0.0.11_linux_arm64.tar.gz"
-        sha256 "53fb145f2af1fdb04b2169097a6ca6de7fb926bd9d60156bf04686dd8b69625f"
+        url "https://github.com/tukaelu/zgsync/releases/download/v0.0.12/zgsync_0.0.12_linux_arm64.tar.gz"
+        sha256 "84cdcea370fe8162df6e7d200f430455149673926f321f1b8bbf4aae94a69bd7"
 
         def install
           bin.install "zgsync"

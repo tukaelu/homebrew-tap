@@ -5,23 +5,23 @@
 class Zgsync < Formula
   desc "CLI that syncs Markdown help center content to Zendesk."
   homepage "https://github.com/tukaelu/zgsync"
-  version "0.0.18"
+  version "0.0.19"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.18/zgsync_0.0.18_darwin_amd64.zip"
-      sha256 "a131a5dfef46fdd73dd3c70fb256a6d6d48b0492e599699c773874a3b0d336a7"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.19/zgsync_0.0.19_darwin_amd64.zip"
+      sha256 "88da3c9193bfd83864283b4ba038c70a2e9c9c8fa5d4144a9050aeb6a3fce0b4"
 
-      def install
+      define_method(:install) do
         bin.install "zgsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.18/zgsync_0.0.18_darwin_arm64.zip"
-      sha256 "57f958f700d564268510e9af8315dc0d77a3c4b98e52c7ac16ce07813ae4be55"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.19/zgsync_0.0.19_darwin_arm64.zip"
+      sha256 "18b1316dd942d3902cbbbc9b563829fa3c6feed65f1b7014ed2151dd2f2caf04"
 
-      def install
+      define_method(:install) do
         bin.install "zgsync"
       end
     end
@@ -29,16 +29,16 @@ class Zgsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.18/zgsync_0.0.18_linux_amd64.tar.gz"
-      sha256 "fc0d36a2cea51cc4c409eb98919bf171dc5310c4869bfd5fe985612a1866cecd"
-      def install
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.19/zgsync_0.0.19_linux_amd64.tar.gz"
+      sha256 "e60bb2bc56922dc75556d0858ce7bedae8435d6796a8771603bd8f1bf912266f"
+      define_method(:install) do
         bin.install "zgsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.18/zgsync_0.0.18_linux_arm64.tar.gz"
-      sha256 "6e61b5bf648141247cc0acde7a9bf66ddc1bbe421efab32050313cb19a2a4f14"
-      def install
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.19/zgsync_0.0.19_linux_arm64.tar.gz"
+      sha256 "5c2724733ce900c15e53d98f7c457999dc6c60af3b78961c316c3d1149f7f8cc"
+      define_method(:install) do
         bin.install "zgsync"
       end
     end

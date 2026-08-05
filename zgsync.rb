@@ -5,21 +5,21 @@
 class Zgsync < Formula
   desc "CLI that syncs Markdown help center content to Zendesk."
   homepage "https://github.com/tukaelu/zgsync"
-  version "0.0.20"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.20/zgsync_0.0.20_darwin_amd64.zip"
-      sha256 "5de736219149d191ef73bb2a81b622e0e324d7aa73b782bf3688c95689f5072f"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.1.0/zgsync_0.1.0_darwin_amd64.zip"
+      sha256 "b96091a73f4a129fcca83976028888c1eb3b432e04b0869cdbb56adcf6e09755"
 
       define_method(:install) do
         bin.install "zgsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.20/zgsync_0.0.20_darwin_arm64.zip"
-      sha256 "26da91f8d8778d93aaab349577a880afddbfb276c99433ed76bc9163f77eeed3"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.1.0/zgsync_0.1.0_darwin_arm64.zip"
+      sha256 "d0ca019d37d7ff04f40577f79813947b38972f51e760967bd8914e51a1ce366f"
 
       define_method(:install) do
         bin.install "zgsync"
@@ -29,15 +29,15 @@ class Zgsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.20/zgsync_0.0.20_linux_amd64.tar.gz"
-      sha256 "df48998d0c0179d243f8f29fb71aa4b60dc9448fe450910724b48148b91ffdbc"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.1.0/zgsync_0.1.0_linux_amd64.tar.gz"
+      sha256 "564e11949a8e79e47f2621b3c3234874213e7f3815065dc14c00702644365408"
       define_method(:install) do
         bin.install "zgsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tukaelu/zgsync/releases/download/v0.0.20/zgsync_0.0.20_linux_arm64.tar.gz"
-      sha256 "db27432c43aac0429bc6f5871a95de1e4f032545906c92e5107a6882f955c6a0"
+      url "https://github.com/tukaelu/zgsync/releases/download/v0.1.0/zgsync_0.1.0_linux_arm64.tar.gz"
+      sha256 "cc2ba1406941b36f1db53a4ad99d60f51b86b63cca45803dae8a0d59059c6482"
       define_method(:install) do
         bin.install "zgsync"
       end
